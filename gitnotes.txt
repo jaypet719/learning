@@ -43,7 +43,16 @@ git merge - merges the current checked out branch you are working in into the ma
 
 git clone - clones a remote repository
 
-git pull - pulls changes in the remote repostiry into the currently checked out branch
+**Cloning and Forking**
+Cloning allows you to keep local and remote connected.
+Forking allows you to start with a codebase from a repo as a base for a new project.
 
-git push -u origin main - pushes changes in the local repo from the currently checked out branch to the branch in the remote repository
+git pull - pulls changes from the remote repository into the currently checked out branch and merges them
+
+git fetch - transfer but do not merge changes from remote to local repo
+
+git push - pushes changes in the local repo from the currently checked out branch to the branch in the remote repository
+
+Origin - refers to your fork
+Upstream - refers to the original remote repo work
 
