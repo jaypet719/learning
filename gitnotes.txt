@@ -1,2 +1,49 @@
 Notes on Git and Git Workflow
 
+**Okay, my take on the standard git workflow.  This is just a logical overview, of course.  I need to go learn the commands and techniques to do all this stuff next!**
+
+A developer coming onto an existing project that already has an existing codebase in a git repository:
+1. Clone the remote directory.
+2. Now you have a local directory with the code.
+3. Create a feature branch.  This is where your new code or changes to existing code will be committed.
+4. Create new code files or change existing code files using your IDE in your local (cloned) directory.
+5. Add those files to the staging area.
+6. Commit those changed files to your feature branch.  Include a useful commit message.
+7. Create a Pull Request to merge your feature branch into the main branch.
+8. A code reviewer/change manager reviews your Pull Request.
+9. Might be some back/forth to adjust code and recommit.  Since Pull Request is open, you don't need to create another.
+10. Code reviewer approves Pull Request and merges the changes in your branch into the main branch.
+
+A developer starting a new project:
+1. Create a git repository.
+2. Initialize a local directory with git.  
+3. Connect the local directory to git.
+4. Create new files.
+5. Add those files to the staging area.
+6. Push those new files to the remote directory.
+7. Now ... other developers can clone that remote directory and execute the process above.
+
+**Now for the CLI commands to make the git workflow happen!**
+
+mkdir - makes a new directory locally
+git init - initializes a local directory. sets up a directory to work with git
+git add - moves a file from a local directory to the staging area
+git add . - moves all files from a local directory to staging area
+git add -A - moves all files from the entire working directory down to the root to staging area
+git commit -m "xxx" - commits the files from the staging area, including a message
+git log - displays previous commit history for the directory
+git reset - resets changse in the working directory
+
+git branch - creates a new branch
+git branch -d - deletes a branch
+git checkout - switches you to the context of a specified branch; all git adds and git commits will be in the context of the checked out branch
+
+git status - displays status of the files in the repository
+git merge - merges the current checked out branch you are working in into the main branch
+
+git clone - clones a remote repository
+
+git pull - pulls changes in the remote repostiry into the currently checked out branch
+
+git push -u origin main - pushes changes in the local repo from the currently checked out branch to the branch in the remote repository
+
